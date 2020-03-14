@@ -1,0 +1,158 @@
+*
+
+{
+    margin:0;
+    padding:0;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Estilização do menu */
+
+.container{
+    position:relative;
+    padding:0 100px;
+}
+
+.container:before{
+    content:'';
+    position:absolute;
+    top:0;
+    right:0;
+    width:350px;
+    height:100%;
+    background:#333;
+    z-index:-2;
+}
+
+.container:after{
+    content:'Doces';
+    position:absolute;
+    bottom:0;
+    left:0;   
+    font-size:16vw;
+    z-index:-2;
+    font-weight:700;
+    color:#000;
+    opacity:0.04;
+}
+
+
+header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:30px 0;
+}
+
+header .logo{
+    font-weight:700;
+    text-transform:uppercase;
+    color:#333;
+    text-decoration:none;
+    font-size:30px;
+}
+
+header .logo span{
+    color:#836FFF;
+}
+
+header ul{
+    position:relative;
+    display:flex;
+}
+
+header ul li{
+    list-style:none;
+    margin:0 20px;
+}
+
+header ul li a{
+    position:relative;
+    text-decoration:none;
+    font-size:18px;
+    padding:4px 10px;
+    color:#333;
+    text-decoration:none;
+}
+
+header ul li:nth-child(3) a,
+header ul li:nth-child(4) a
+{
+    color:#fff;
+}
+
+header ul li a:before{
+    content:'';
+    position:absolute;
+    top:0;
+    left:0;
+    width:0;
+    height:100%;
+    background:#836FFF;
+    z-index:-1;
+    transition:0.5s ease-in-out;
+}
+
+header ul li a:hover:before,
+header ul li a:active:before
+{
+    width:40px;
+}
+
+/*Estilização de conteúdo  */
+
+.conteudo{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-top:50px;
+}
+
+.conteudo .textoBanner{
+    position:relative;
+    max-width:500px;
+    margin-right:50px;
+}
+
+.conteudo .textoBanner h2{
+    font-size:54px;
+    text-transform:uppercase;
+    font-weight:800;
+    line-height:1.2em;
+    color:#333;
+}
+
+.conteudo .textoBanner p{
+    font-size:18px;
+    color:#333;
+    line-height: 1.8em;
+    margin:20px 0;
+}
+
+.conteudo .textoBanner a{
+    position:relative;
+    display:inline-block;
+    text-transform:uppercase;
+    font-weight:700;
+    color:#333;
+    letter-spacing:1px;
+    font-size:18px;
+    text-decoration:none;
+    padding:15px;
+}
+
+.conteudo .textoBanner a:before{
+    content:'';
+    position:absolute;
+    top:0;
+    left:0;
+    width:60px;
+    height:100%;
+    background:#836FFF;
+    z-index:-1;
+    transition:0.5s ease-in-out;
+}
+
+.conteudo .textoBanner a:hover:before{
+    width:100%;
+}
