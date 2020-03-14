@@ -1,0 +1,20 @@
+{
+  "name": "gidosbolos-frontend",
+  "version": "1.0.0",
+  "description": "Site com foco em divulgar e vender bolos artesanais dos mais variados sabores",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Dogleigo/gidosbolos-frontend.git"
+  },
+  "keywords": [
+    "bolos",
+    "vendas",
+    "divulgacao"
+  ],
+  "author": "Kaique Junior",
+  "license": "MIT"
+}
