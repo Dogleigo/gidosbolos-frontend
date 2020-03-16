@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=	, initial-scale=1.0">
     <meta name="author" content="Kaique Junior">
-        <title>GIDOSBOLOS</title>
+        <title>GIdosBOLOS</title>
     <link rel="stylesheet" href="Index.css">
 </head>
 <body>
@@ -19,20 +19,96 @@
                 </ul>
         </header>
         <div class="conteudo">
-            <div class="textoBanner">
-                <h2>Experimente<br>
-                nossos bolos</h2>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Beatae, soluta<br> 
-                    laborum quibusdam deserunt placeat, non necessitatibus accusamus, doloremque<br>
-                    quam vel praesentium. Ab repellendus accusamus facere corrupti error tempore.</p>
-                    <a href="#">Veja mais</a>
-            </div>
-                <div class="tamanhoImg">
-                    <div class="imgBanner">
-                        <img src="img/bolo4.jpg" alt="">
-                    </div>
+            <div class="textoBanner" id="mostrartextoslides">
+                <div class="active">
+                    <h2>Experimente<br>
+                    nossos bolos</h2>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Beatae, soluta<br> 
+                        laborum quibusdam deserunt placeat, non necessitatibus accusamus, doloremque<br>
+                        quam vel praesentium. Ab repellendus accusamus facere corrupti error tempore.</p>
+                        <a href="#">Veja mais</a>
                 </div>
+                <div>
+                    <h2>Há mais de<br>
+                    7 anos no ramo</h2>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Beatae, soluta<br> 
+                        laborum quibusdam deserunt placeat, non necessitatibus accusamus, doloremque<br>
+                        quam vel praesentium. Ab repellendus accusamus facere corrupti error tempore.</p>
+                        <a href="#">Veja mais</a>
+                </div>
+                <div>
+                    <h2>Acumule<br>
+                    pontos e troque por bolos</h2>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Beatae, soluta<br> 
+                        laborum quibusdam deserunt placeat, non necessitatibus accusamus, doloremque<br>
+                        quam vel praesentium. Ab repellendus accusamus facere corrupti error tempore.</p>
+                        <a href="#">Veja mais</a>
+                </div>
+                <div>
+                    <h2>Ah, tá<br>
+                    gostosinho</h2>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Beatae, soluta<br> 
+                        laborum quibusdam deserunt placeat, non necessitatibus accusamus, doloremque<br>
+                        quam vel praesentium. Ab repellendus accusamus facere corrupti error tempore.</p>
+                        <a href="#">Veja mais</a>
+                </div>
+            </div>
+                    <div class="imgBanner" id="mostrarslides">
+                        <img src="img/bolo4.jpg" class="active">
+                        <img src="img/bolo3.jpeg">
+                        <img src="img/bolo2.jpg">
+                        <img src="img/bolo1.jpg">
+                    </div>   
+        </div>
+        <div class="icones">
+            <ul class="midias">
+                <li><a href="#"><img src="img/icones/facebook.png"></a></li>
+                <li><a href="#"><img src="img/icones/twitter.png"></a></li>
+                <li><a href="#"><img src="img/icones/instagram.png"></a></li>
+            </ul>
+            <ul class="passador">
+                <li><a href="#"><img src="img/icones/left.png" onclick="voltarSlide();passarTextoSlide();"></a></li>
+                <li><a href="#"><img src="img/icones/right.png" onclick="passarSlide();voltarTextoSlide();"></a></li>
+            </ul>
         </div>
     </div>
+    <script type="text/javascript">
+
+    //Criando função para passar slides
+
+        var mostrarslides = document.getElementById('mostrarslides');
+        var slides = mostrarslides.getElementsByTagName('img');
+        var i = 0;
+
+            function passarSlide(){
+                slides[i].classList.remove('active');
+                i = (i + 1) % slides.length;
+                slides[i].classList.add('active'); 
+            }
+
+            function voltarSlide(){
+                slides[i].classList.remove('active');
+                i = (i - 1 + slides.length) % slides.length;
+                slides[i].classList.add('active'); 
+            }
+            
+            //Criando funcão para passar o texto
+
+        var mostrartextoslides = document.getElementById('mostrartextoslides');
+        var textoslides = mostrartextoslides.getElementsByTagName('div');
+        var i = 0;
+
+            function passarTextoSlide(){
+                textoSlides[i].class.remove('active');
+                i = (i + 1) % textSlides.length;
+                textoslides[i].classList.add('active'); 
+            }
+
+            function voltarTextoSlide(){
+                textoslides[i].class.remove('active');
+                i = (i - 1 + textSlides.length) % textSlides.length;
+                textoslides[i].classList.add('active'); 
+            }
+    </script>
 </body>
 </html>
