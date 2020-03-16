@@ -28,16 +28,16 @@
                         <a href="#">Veja mais</a>
                 </div>
                 <div>
-                    <h2>Há mais de<br>
-                    7 anos no ramo</h2>
+                    <h2>Mais de 7 anos<br>
+                    no ramo</h2>
                     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Beatae, soluta<br> 
                         laborum quibusdam deserunt placeat, non necessitatibus accusamus, doloremque<br>
                         quam vel praesentium. Ab repellendus accusamus facere corrupti error tempore.</p>
                         <a href="#">Veja mais</a>
                 </div>
                 <div>
-                    <h2>Acumule<br>
-                    pontos e troque por bolos</h2>
+                    <h2>Descontos<br>
+                    cumlativos</h2>
                     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Beatae, soluta<br> 
                         laborum quibusdam deserunt placeat, non necessitatibus accusamus, doloremque<br>
                         quam vel praesentium. Ab repellendus accusamus facere corrupti error tempore.</p>
@@ -66,8 +66,8 @@
                 <li><a href="#"><img src="img/icones/instagram.png"></a></li>
             </ul>
             <ul class="passador">
-                <li><a><img src="img/icones/left.png" onclick="voltarSlide();"></a></li>
-                <li><a><img src="img/icones/right.png" onclick="passarSlide();"></a></li>
+                <li><a><img src="img/icones/left.png" onclick="voltarSlide(); voltarTextoSlide();"></a></li>
+                <li><a><img src="img/icones/right.png" onclick="passarSlide(); passarTextoSlide();"></a></li>
             </ul>
         </div>
     </div>
@@ -89,6 +89,24 @@
                 slides[index].classList.remove('active');
                 index = (index - 1 + slides.length) % slides.length;
                 slides[index].classList.add('active'); 
+            }
+
+            //Criando função para passar o texto
+
+        var mostrartextoslides = document.getElementById('mostrartextoslides');
+        var textoslides = mostrartextoslides.getElementsByTagName('div');
+        var i = 0;
+
+            function passarTextoSlide(){
+                textoslides[i].classList.remove('active');
+                i = (i + 1) % textoslides.length;
+                textoslides[i].classList.add('active'); 
+            }
+
+            function voltarTextoSlide(){
+                textoslides[i].classList.remove('active');
+                i = (i - 1 + textoslides.length) % textoslides.length;
+                textoslides[i].classList.add('active'); 
             }
     </script>
 </body>
