@@ -2,7 +2,6 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=	, initial-scale=1.0">
     <meta name="author" content="Kaique Junior">
         <title>GIdosBOLOS</title>
     <link rel="stylesheet" href="Index.css">
@@ -54,10 +53,10 @@
                 </div>
             </div>
                     <div class="imgBanner" id="mostrarslides">
-                        <img src="img/bolo4.jpg" class="active">
-                        <img src="img/bolo3.jpeg">
-                        <img src="img/bolo2.jpg">
-                        <img src="img/bolo1.jpg">
+                        <img src="img/bolo1.jpg" class="active">
+                        <img src="img/bolo2.jpeg">
+                        <img src="img/bolo5.jpg">
+                        <img src="img/bolo4.jpeg">
                     </div>   
         </div>
         <div class="icones">
@@ -67,8 +66,8 @@
                 <li><a href="#"><img src="img/icones/instagram.png"></a></li>
             </ul>
             <ul class="passador">
-                <li><a href="#"><img src="img/icones/left.png" onclick="voltarSlide();passarTextoSlide();"></a></li>
-                <li><a href="#"><img src="img/icones/right.png" onclick="passarSlide();voltarTextoSlide();"></a></li>
+                <li><a><img src="img/icones/left.png" onclick="voltarSlide();"></a></li>
+                <li><a><img src="img/icones/right.png" onclick="passarSlide();"></a></li>
             </ul>
         </div>
     </div>
@@ -78,36 +77,18 @@
 
         var mostrarslides = document.getElementById('mostrarslides');
         var slides = mostrarslides.getElementsByTagName('img');
-        var i = 0;
+        var index = 0;
 
             function passarSlide(){
-                slides[i].classList.remove('active');
-                i = (i + 1) % slides.length;
-                slides[i].classList.add('active'); 
-            }
-
-            function voltarSlide(){
-                slides[i].classList.remove('active');
-                i = (i - 1 + slides.length) % slides.length;
-                slides[i].classList.add('active'); 
+                slides[index].classList.remove('active');
+                index = (index + 1) % slides.length;
+                slides[index].classList.add('active'); 
             }
             
-            //Criando funcão para passar o texto
-
-        var mostrartextoslides = document.getElementById('mostrartextoslides');
-        var textoslides = mostrartextoslides.getElementsByTagName('div');
-        var i = 0;
-
-            function passarTextoSlide(){
-                textoSlides[i].class.remove('active');
-                i = (i + 1) % textSlides.length;
-                textoslides[i].classList.add('active'); 
-            }
-
-            function voltarTextoSlide(){
-                textoslides[i].class.remove('active');
-                i = (i - 1 + textSlides.length) % textSlides.length;
-                textoslides[i].classList.add('active'); 
+            function voltarSlide(){
+                slides[index].classList.remove('active');
+                index = (index - 1 + slides.length) % slides.length;
+                slides[index].classList.add('active'); 
             }
     </script>
 </body>
