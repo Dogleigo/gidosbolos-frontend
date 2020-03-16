@@ -156,3 +156,29 @@ header ul li a:active:before
 .conteudo .textoBanner a:hover:before{
     width:100%;
 }
+
+.conteudo .tamanhoImg{
+    width:440px;
+    height:440px;
+    display:flex;
+}
+
+.conteudo .tamanhoImg .imgBanner{
+    position:relative;
+    width:440px;
+    height:440px;
+    background: #000;
+}
+
+.conteudo .tamanhoImg .imgBanner img{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transition:0.5s;
+}
+
+
+
