@@ -235,7 +235,115 @@ header ul li a:active:before
     opacity:0.5;
 }
 
+.iconeMenu{
+    display:none;
+}
 
+/* Iniciando responsividade */
+
+@media (max-width: 992px){
+
+    .container{
+        padding:20px 50px;
+    }
+    .container:before{
+        display: none;
+    } 
+    header {
+        padding:0;
+    }
+    .icones .passador li{
+        filter:invert(0);
+    }
+    .icones .passador li:hover{
+        opacity:1;
+    }
+    .conteudo .textoBanner h2 {
+        font-size:30px;
+    }
+    .conteudo{
+        margin:0;
+        flex-direction:column-reverse;
+    }
+    .conteudo .imgBanner{
+        width:100%;
+        height:40vh;
+        margin:20px 0; 
+    }
+    .conteudo .textoBanner{
+        max-width:100%;
+        padding-right:0;
+    }
+    header ul{
+        display:none;
+        position:fixed;
+        top:0;
+        left:0;
+        width:100%;
+        height:100vh;
+        background:#fff;
+        z-index:10000;
+        padding:100px 0;
+    }
+    header.active ul{
+        display:initial;
+    }
+    header ul li{
+        padding:30px;
+        text-align:center;
+    }
+    header ul li a{
+        color:#333 !important;
+        font-size:55px;
+    }
+    header ul li a:hover:before,
+    header ul li a:active:before
+    {
+        width:100%;
+    }
+    .iconeMenu{
+        display:initial;
+        position:absolute;
+        top:15px;
+        right:50px;
+        cursor:pointer;
+        padding:8px;
+        z-index:10000;
+        background:#fff url(img/icones/menu.png);
+        width:34px;
+        height:34px;
+        background-repeat:no-repeat;
+        background-position:6px;
+    }
+    header.active .iconeMenu{
+        margin-top:15px;
+        right:25px;
+        width:64px;
+        height:64px;
+        background:#fff url(img/icones/fechar.png);
+        background-repeat:no-repeat;
+        background-position:6px;
+        transition: 0.5s;
+        transform:rotate(360deg);
+    }
+
+}
+@media (max-width: 767px){
+
+    .container{
+        padding: 20px 30px;
+    }
+    .iconeMenu{
+        right:30px;
+    }
+    .icones .passador{
+        max-width:40px;
+    }
+    .conteudo .textoBanner{
+        position:relative;
+        max-width:500px;
+        margin-right:0px;
+}
 
 
 

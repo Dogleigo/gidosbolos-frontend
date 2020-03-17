@@ -8,7 +8,7 @@
 </head>
 <body>
     <div class="container">
-        <header>
+        <header id="navegacao"> 
             <a href="#" class="logo">GIDOS<span>BOLOS</span></a>
                 <ul>
                     <li><a href="#" class="active">Início</a>
@@ -16,6 +16,7 @@
                     <li><a href="#">Sobre</a></li>
                     <li><a href="#">Contato</a></li>
                 </ul>
+                <span class="iconeMenu" onclick="menuToggle();"></span>
         </header>
         <div class="conteudo">
             <div class="textoBanner" id="mostrartextoslides">
@@ -66,8 +67,8 @@
                 <li><a href="#"><img src="img/icones/instagram.png"></a></li>
             </ul>
             <ul class="passador">
-                <li><a><img src="img/icones/left.png" onclick="voltarSlide(); voltarTextoSlide();"></a></li>
-                <li><a><img src="img/icones/right.png" onclick="passarSlide(); passarTextoSlide();"></a></li>
+                <li><a><img src="img/icones/esquerda.png" onclick="voltarSlide(); voltarTextoSlide();"></a></li>
+                <li><a><img src="img/icones/direita.png" onclick="passarSlide(); passarTextoSlide();"></a></li>
             </ul>
         </div>
     </div>
@@ -108,6 +109,15 @@
                 i = (i - 1 + textoslides.length) % textoslides.length;
                 textoslides[i].classList.add('active'); 
             }
+
+            //Menu CSS e JS
+
+            function menuToggle(){
+                var nav = document.getElementById('navegacao');
+                nav.classList.toggle('active')
+
+            }
+
     </script>
 </body>
 </html>
