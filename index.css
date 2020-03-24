@@ -247,66 +247,23 @@ header ul li a:active:before
     text-align:center;
 }
 
-.barra{
-    width:150px;
-    height:8px;
-    border-radius:5px;
-    margin-top:15px;
-    margin-left:615px;
-    background:#000;
-}
-
 /* Galeria *Arrumar linhas(redundante)*/
 
-.fotosl1{
+.gibolos{
     display:flex;
+    flex-wrap: wrap;
     flex-direction:row;
-    justify-content: space-between;
+    align-items: center;
+    justify-content: center;
 }
 
-.fotosl2{
-    display:flex;
-    flex-direction:row;
-    justify-content: space-between;
-}
-
-.fotosl3{
-    display:flex;
-    flex-direction:row;
-    justify-content: space-between;
-}
 .quadros{
     margin-top:20px;
+    padding:0 20px 20px;
     width:320px;
     height:300px;
-    background:#ccc;
 }
-
-.quadrosl2{
-    margin-top:20px;
-    width:320px;
-    height:300px;
-    background:#ccc;
-}
-
-.quadrosl3{
-    margin-top:20px;
-    width:320px;
-    height:300px;
-    background:#ccc;
-}
-
 .quadros img{
-    width:100%;
-    height:100%;
-}
-
-.quadrosl2 img{
-    width:100%;
-    height:100%;
-}
-
-.quadrosl3 img{
     width:100%;
     height:100%;
 }
