@@ -278,7 +278,7 @@ header ul li a:active:before
     display:flex;
     position: relative;
     margin: 0;
-    top: 63px;
+    top: 20px;
 }
 
 .fotodona img{
@@ -294,6 +294,73 @@ header ul li a:active:before
     color: #fff;
     text-align:left;
     margin:0 20px 0 20px;
+}
+
+.containerprod{
+flex-wrap: wrap;
+    flex-direction:row;
+    align-items: center;
+    justify-content: center;
+}
+
+.bannerprod{
+    display: flex;
+    position: relative;
+    margin:40px 0 0 60px;
+    width:280px;
+    height:250px;
+    background: #333;
+}
+
+.bannerprod:hover{
+    background:#836FFF;
+    transition:0.5s linear;
+}
+
+.conteudoprod{
+    display: flex;
+    position: absolute;
+    color: #fff;
+}
+
+.produto img{
+    width:180px;
+    height:200px;
+    justify-content: center;
+}
+
+.conteudoprod h2{
+    display: none;
+}
+
+.tamanho span{
+    width:26px;
+    height:26px;
+    text-align:center;
+    line-height: 26px;
+    font-size: 14px;
+    display:inline-block;
+    color: #fff;
+    margin:0 5px;
+    margin-top:30px;
+    transition:0.5s;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.descproduto .tamanho span:hover{
+    background:#fff;
+    color: #000;
+ }
+
+.conteudoprod .descproduto .tamanho span{
+    font-size:20px;
+    text-align: center;
+    border-radius: 5px;
+    width: 30px;
+    height: 30px;
+    margin: 5px;
+    background: #5d3b28;
 }
 
 /* Iniciando responsividade */
