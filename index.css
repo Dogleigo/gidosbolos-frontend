@@ -297,7 +297,8 @@ header ul li a:active:before
 }
 
 .containerprod{
-flex-wrap: wrap;
+    display:flex;
+    flex-wrap: wrap;
     flex-direction:row;
     align-items: center;
     justify-content: center;
@@ -331,6 +332,10 @@ flex-wrap: wrap;
 
 .conteudoprod h2{
     display: none;
+}
+
+.tamanho h3{
+    margin-top:10px;
 }
 
 .tamanho span{
