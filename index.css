@@ -24,7 +24,7 @@ html{
     right:0;
     width:350px;
     height:100%;
-    background:#333;
+    background:#1C1C1C;
     z-index:-2;
 }
 
@@ -315,7 +315,7 @@ header ul li a:active:before
 
 .bannerprod:hover{
     background:#836FFF;
-    transition:0.5s linear;
+    transition:0.5s ease-in;
 }
 
 .conteudoprod{
@@ -332,6 +332,16 @@ header ul li a:active:before
 
 .conteudoprod h2{
     display: none;
+}
+
+.conteudoprod .descprod .tamanho span{
+    font-size:20px;
+    text-align: center;
+    border-radius: 5px;
+    width: 30px;
+    height: 30px;
+    margin: 5px;
+    background: #5d3b28;
 }
 
 .tamanho h3{
@@ -353,19 +363,73 @@ header ul li a:active:before
     cursor: pointer;
 }
 
-.descproduto .tamanho span:hover{
+.descprod .tamanho span:hover{
     background:#fff;
     color: #000;
  }
 
-.conteudoprod .descproduto .tamanho span{
-    font-size:20px;
-    text-align: center;
-    border-radius: 5px;
-    width: 30px;
-    height: 30px;
-    margin: 5px;
+.containerprod .bannerprod .descprod .valor span{
+    margin:0 0 0 5px;
+    font-size: 35px;
+    color: #fff;
+ }
+
+.descprod a{
+    display: inline-block;
+    margin-top:30px;
+    margin-left:-10px;
     background: #5d3b28;
+    border-radius: 4px;
+    padding: 10px 10px;
+    text-decoration:none;
+    font-weight: 600;
+    color: #fff;
+    transition: 0.5s;
+ }
+
+/*Área de contato*/
+
+ #contato h2{
+    text-align:center;
+}
+
+.areacontato{
+    display: flex;
+    position: relative;
+    color: #fff;
+    width:1000px;
+    height:500px;
+    margin: 30px;
+    background:#333;
+}
+
+.areacontato .titulo{
+    font-size:40px;
+    font-family: 'Times New Roman', Times, serif;
+    margin: 100px 0 0 100px;
+}
+
+.inputs{
+    position:relative;
+    justify-content: space-between;
+    align-items: center;
+    width:300px;
+    height:40px;
+    background:#ccc;
+    margin-left:-700px;
+    margin-top:200px;
+    
+}
+
+.inputs input{
+    display: flex;
+    position: relative;
+    align-content: center;
+    background: none;
+    margin-left: 20px;
+    margin-top: 10px;
+    border:none;
+    outline: none;
 }
 
 /* Iniciando responsividade */
