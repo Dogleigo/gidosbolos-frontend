@@ -62,3 +62,10 @@
             vlrDoces.innerHTML = `R$${vlrd}`
         }
 
+//Carrinho modal
+
+function modal(){
+    
+    var popup = document.getElementById('popup');
+    popup.classList.toggle('active');
+}
