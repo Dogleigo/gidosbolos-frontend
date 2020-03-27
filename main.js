@@ -16,7 +16,7 @@
             slides[index].classList.add('active'); 
         }
 
-        //Criando função para passar o texto
+//Criando função para passar o texto
 
     var mostrartextoslides = document.getElementById('mostrartextoslides');
     var textoslides = mostrartextoslides.getElementsByTagName('div');
@@ -34,7 +34,7 @@
             textoslides[i].classList.add('active'); 
         }
 
-        //Menu CSS e JS
+//Menu CSS e JS
 
         function menuToggle(){
             var nav = document.getElementById('navegacao');
@@ -42,5 +42,23 @@
 
         }
 
+//Valores dinamicos nos banners
 
+    var vlrBolo = document.getElementById('vlrBolo');
+
+        function calcBolo(vlrb){
+            vlrBolo.innerHTML = `R$${vlrb}`
+        }
+
+    var vlrCup = document.getElementById('vlrCup');
+
+        function calcCup(vlrc){
+            vlrCup.innerHTML = `R$${vlrc}`
+        }
+
+    var vlrDoces = document.getElementById('vlrDoces');
+
+        function calcDoces(vlrd){
+            vlrDoces.innerHTML = `R$${vlrd}`
+        }
 
