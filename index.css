@@ -311,11 +311,12 @@ header ul li a:active:before
     width:280px;
     height:250px;
     background: #333;
+    transition:0.5s linear;
 }
 
 .bannerprod:hover{
     background:#836FFF;
-    transition:0.5s ease-in;
+    transition:0.5s linear;
 }
 
 .conteudoprod{
@@ -449,7 +450,6 @@ header ul li a:active:before
     margin-left:480px;
     background: #5d3b28;
     cursor: pointer;
-    z-index:10000;
 }
 
 /*Área de contato*/
@@ -495,6 +495,62 @@ header ul li a:active:before
     margin-top: 10px;
     border:none;
     outline: none;
+}
+
+/*Rodapé*/
+
+footer{
+    background:#363636;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:30px;
+}
+
+footer .logo{
+    width:100%;
+    font-weight:700;
+    text-transform:uppercase;
+    color:#fff;
+    text-decoration:none;
+    font-size:30px;
+    margin-left:165px;
+}
+
+footer .logo span{
+    color:#836FFF;
+}
+
+footer .icones .midias{
+    position:relative;
+    display:flex;
+    margin-left:200px;
+    margin-top:-20px;
+}
+
+footer .icones .midias li{
+    list-style:none;
+}
+
+footer .icones .midias li img{
+    display:inline-block;
+    max-height:24px;
+    transition:0.5s ease-in-out;
+}
+
+footer .icones .midias li:hover img{
+    transform:translateY(-10px);
+}
+
+.footer-textos{
+    margin-left:30px;
+    text-align: center;
+    color: #fff;
+}
+
+.footer-textos h4{
+    margin: 10px;
+    margin-top:-30px;
 }
 
 /* Iniciando responsividade */
@@ -584,7 +640,6 @@ header ul li a:active:before
         transition: 0.5s;
         transform:rotate(360deg);
     }
-
 }
 @media (max-width: 767px){
 
